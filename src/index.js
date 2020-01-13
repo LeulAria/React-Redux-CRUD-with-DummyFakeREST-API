@@ -13,9 +13,6 @@ import appReducer from './store/reducers/appReducer';
 
 import { Provider } from 'react-redux';
 
-
-const middleware = [thunk];
-
 const store = createStore(
   appReducer,
   compose( applyMiddleware(thunk) )
