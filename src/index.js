@@ -6,10 +6,21 @@ import * as serviceWorker from './serviceWorker';
 import App from './App'
 
 // Redux modules
+import { createStore, applyMiddleware, compose } from 'redux';
+import thunk from 'redux-thunk';
+
+import appReducer from './store/reducers/appReducer';
+
 import { Provider } from 'react-redux';
 
-// The Store
-import store from './store'
+
+const middleware = [thunk];
+
+const store = createStore(
+  appReducer,
+  compose( applyMiddleware(thunk) )
+);
+
 
 serviceWorker.register();
 
