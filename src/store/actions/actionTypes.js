@@ -1,0 +1,4 @@
+export const FETCH_DATAS = 'FETCH_DATAS';
+export const CREATE_EMPLOYEE = 'CREATE_EMPLOYEE';
+export const UPDATE_DATA = 'UPDATE_DATA';
+export const DELETE_DATA = 'DELETE_DATA';
